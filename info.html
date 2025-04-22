@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cheat Sheet HTML CSS JS</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #1e1e2f;
+      color: #f1f1f1;
+    }
+
+    h1 {
+      text-align: center;
+      padding: 20px;
+      background: linear-gradient(90deg, #ff6a00, #ee0979);
+      margin: 0;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+
+    .section {
+      background: #2d2d44;
+      margin-bottom: 15px;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .section-header {
+      padding: 15px 20px;
+      background: #3f3f5a;
+      cursor: pointer;
+      font-weight: bold;
+      position: relative;
+    }
+
+    .section-header::after {
+      content: '▼';
+      position: absolute;
+      right: 20px;
+      transition: transform 0.3s ease;
+    }
+
+    .section.active .section-header::after {
+      transform: rotate(180deg);
+    }
+
+    .section-content {
+      max-height: 0;
+      overflow: hidden;
+      padding: 0 20px;
+      background: #1c1c2b;
+      transition: max-height 0.5s ease, padding 0.3s ease;
+    }
+
+    .section.active .section-content {
+      max-height: 1000px;
+      padding: 15px 20px;
+    }
+
+    pre {
+      background: #111122;
+      padding: 10px;
+      border-radius: 5px;
+      overflow-x: auto;
+      color: #00ffcc;
+    }
+
+    code {
+      font-family: Consolas, monospace;
+    }
+  </style>
+</head>
+<body>
+  <h1>Cheat Sheet HTML / CSS / JS</h1>
+  <div class="container">
+    <!-- HTML -->
+    <div class="section">
+      <div class="section-header">HTML</div>
+      <div class="section-content">
+        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Judul&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Heading&lt;/h1&gt;
+    &lt;p&gt;Paragraf&lt;/p&gt;
+    &lt;a href="link.html"&gt;Link&lt;/a&gt;
+    &lt;img src="gambar.jpg" alt="Gambar"&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+   
+      </div>
+    </div>
+    
+
+    <!-- CSS -->
+    <div class="section">
+      <div class="section-header">CSS</div>
+      <div class="section-content">
+        <pre><code>/* Selektor dasar */
+body {
+  background-color: #fff;
+  color: #333;
+}
+
+/* Flexbox */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Transisi dan animasi */
+button {
+  transition: background-color 0.3s ease;
+}
+button:hover {
+  background-color: #ff6600;
+}</code></pre>
+      </div>
+    </div>
+
+    <!-- JavaScript -->
+    <div class="section">
+      <div class="section-header">JavaScript</div>
+      <div class="section-content">
+        <pre><code>// Output
+      console.log("Hello, world!");
+
+// Variabel
+let nama = "fahri";
+
+// Fungsi
+function sapa(user) {
+  return "Halo, " + user;
+}
+
+// Event listener
+document.getElementById("btn").addEventListener("click", function() {
+  alert("Tombol diklik!");
+});</code></pre>
+      </div>
+       </div>
+     <a href="index.html" style="border: 2px solid #ee0979; padding: 5px 10px; text-decoration: none; border-radius: 5px; color: white;">back</a>
+  </div>
+
+  <script>
+    const sections = document.querySelectorAll(".section");
+    sections.forEach(section => {
+      section.querySelector(".section-header").addEventListener("click", () => {
+        section.classList.toggle("active");
+      });
+    });
+
+  </script>
+</body>
+</html>

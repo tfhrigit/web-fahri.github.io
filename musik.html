@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>playlist gwejh</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body class="bg-gray-100 min-h-screen pb-10">
+
+  <!-- Navbar -->
+  <header class="bg-white shadow-md p-4 flex justify-between items-center">
+    <h1 class="text-xl font-bold text-purple-700">my music</h1>
+
+    <!-- Dropdown -->
+    <div class="relative" x-data="{ open: false }">
+      <button @click="open = !open" class="flex items-center space-x-2 bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16"/>
+        </svg>
+        <span>menu</span>
+      </button>
+
+      <div x-show="open" x-transition class="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg z-50 overflow-hidden">
+        <a href="musik.html" class="block px-4 py-3 text-gray-700 hover:bg-purple-100">playlist</a>
+        <a href="index.html" class="block px-4 py-3 text-red-700 hover:bg-purple-100">back</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Playlist -->
+  <main class="max-w-3xl mx-auto mt-10 px-4">
+    <h2 class="text-3xl font-semibold text-center text-gray-800 mb-8">my favorite musik gw</h2>
+
+    <div class="space-y-6">
+      <!-- Lagu -->
+      <div class="bg-white rounded-lg shadow p-4">
+        <p class="font-semibold text-gray-700 mb-2">photograph- ed sheeran</p>
+        <audio controls class="w-full">
+          <source src="musik/photograph.mp3" type="audio/mpeg">
+          browser anda tidak mendukung pemutar audio.
+        </audio>
+      </div>
+
+      <div class="bg-white rounded-lg shadow p-4">
+        <p class="font-semibold text-gray-700 mb-2">end of beginning - djo</p>
+        <audio controls class="w-full">
+          <source src="musik/end-of-beginning.mp3" type="audio/mpeg">
+        </audio>
+      </div>
+
+      <div class="bg-white rounded-lg shadow p-4">
+        <p class="font-semibold text-gray-700 mb-2">the night we met - lord huron</p>
+        <audio controls class="w-full">
+          <source src="musik/the-night-we-met.mp3" type="audio/mpeg">
+        </audio>
+      </div>
+
+      <div class="bg-white rounded-lg shadow p-4">
+        <p class="font-semibold text-gray-700 mb-2">heat waves</p>
+        <audio controls class="w-full">
+          <source src="musik/heat-waves.mp3" type="audio/mpeg">
+        </audio>
+      </div>
+
+      <div class="bg-white rounded-lg shadow p-4">
+        <p class="font-semibold text-gray-700 mb-2">margareth - lana del rey</p>
+        <audio controls class="w-full">
+          <source src="musik/margareth-lana-del-rey.mp3" type="audio/mpeg">
+        </audio>
+      </div>
+
+      <div class="bg-white rounded-lg shadow p-4">
+        <p class="font-semibold text-gray-700 mb-2">say yes to heaven - lana del rey</p>
+        <audio controls class="w-full">
+          <source src="musik/say-yes-to-heaven.mp3" type="audio/mpeg">
+        </audio>
+      </div>
+
+      <div class="bg-white rounded-lg shadow p-4">
+        <p class="font-semibold text-gray-700 mb-2">it will rain - bro mars</p>
+        <audio controls class="w-full">
+          <source src="musik/it-will-rain.mp3" type="audio/mpeg">
+        </audio>
+      </div>
+    </div>
+  </main>
+
+</body>
+</html>
